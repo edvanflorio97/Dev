@@ -1,22 +1,31 @@
 @charset "uft-8";
+/*isso resolveu o problema do meu codioo*/
 
+/*usei o class para chamar a tag css no codigo, e tambem oelo propio nome da tag. (usei um pouco de css em line, mas a prioridade e css externo)*/
 
 * {
   box-sizing: border-box;
 }
 
+/*essa tag é para o corpo do codigo*/
 body {
   font-family: Arial;
   padding: 10px;
-  background: #f1f1f1;
+  background: #f8f8f8;
 }
 
+/*essa tag e para o cabeçalho*/
 .header {
-  background-color: #f8f8f8;
+  background-color: #fcfcfc;
   text-align: center;
-  padding: 10px;
+  padding: 30px;
+}
+img.center{
+border-radius: 25px;
 }
 
+
+/*essa tag e para organizar a barra do navegação*/ 
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -27,7 +36,8 @@ body {
   position: sticky;
   top: 0;   
 }
-  
+ 
+/*essa tag é organizar a barra do menu*/
 .topnav a {
   float: left;
   display: block;
@@ -37,81 +47,96 @@ body {
   text-decoration: none;   
 }
   
-  
+ /*essa tag é para organizar a barra do navegação*/ 
 .topnav a:hover {
   background-color:#623771;
   color: black;
 }
   
-  
+ /*essa tag é para coluna do primeiro codigo index (esquerdo)*/ 
 .leftcolumn {   
   float: left;
-  width: 75%;
+  max-width: 75%;
 }
-  
+
+/*essa tag é para coluna do primeiro codigo index (direito)*/
 .rightcolumn {
   float: left;
-  width: 25%;
+  max-width: 25%;
   background-color: #f1f1f1;
   padding-left: 20px;
 }
 
+/**/
 .fakeimg {
   background-color: #aaa;
   width: 100%;
   padding: 30px;
 }
 
+img.fakeimg1 {
+  background-color: rgb(104, 61, 130);
+  width: 100%;
+  padding: auto;
+}
 
+
+/**/
 .card {
   background-color: white;
   padding: 20px;
   margin-top: 16px;
 }
 
-
+/**/
 .row:after {
-  content: " ";
+  content: "";
   display: table;
   clear: both;
 }
 
 
-
+/*para organizar o paragrafo*/
 p.p {
-  margin-top: 2cm;
-  margin-left: 2cm;
-  margin-right: 2cm;
+  padding: auto;
+  text-align: justify;
+ 
 }
 
-
+/*essa tag e para a tabela*/
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 70%;
-  margin-top: 1cm;
+  margin-left: auto;
+  margin-right: auto;
 }
-  
+ 
+/**/
 td {
   border: 1px solid #080808;
   padding: 8px;   
 }
 
+/**/
 th {
   text-align: left;
   background-color: #623771;
   color: white;
   padding: 8px;
 }
-  
+
+/**/
 tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+/**/
 tr:hover {
   background-color: #623771;
 }
-  
+ 
+/*essa tag e para as colunas da pagina de noticias*/
 .column {
   float: left;
   width: 33.33%;
@@ -119,7 +144,7 @@ tr:hover {
   height: 700px;
 }
 
-
+/*essa tag é para o rodapé*/
 .footer {
   padding: 20px;
   text-align: center;
@@ -127,13 +152,13 @@ tr:hover {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
+@media screen and (max-width: 400px) {
+  .header {
+    width: auto;
+    float: none; 
   }
 }
-
+/*reponsividade*/
 @media screen and (max-width: 400px) {
   .topnav a {
     float: none;
@@ -141,6 +166,15 @@ tr:hover {
   }
 }
 
+/*reponsividade*/
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/*reponsividade*/
 @media (max-width: 600px) {
   .column {
     width: 100%;
